@@ -39,11 +39,19 @@ public class Pasta {
 		for (Pasta folder : pastas) {
 			cont += folder.tamanhoTotal();
 		}
-//		cont += tamanho();
-		cont += totalFiles();
+		cont += tamanho();
 		return cont;
 	}
 
+	public int arquivosTotais() {
+		int cont = 0;
+		for (Pasta folder : pastas) {
+			cont += folder.arquivosTotais();
+		}
+		cont += totalFiles();
+		return cont;
+	}
+	
 	public int totalFiles() {
 		return arquivos.size();
 	}

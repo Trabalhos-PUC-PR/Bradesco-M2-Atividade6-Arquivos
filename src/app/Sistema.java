@@ -27,23 +27,24 @@ public class Sistema {
 		subsub.add(file3);
 		subsub.add(file4);
 		subsub.add(file7);
-		System.out.printf("Tamanho em bytes da %s: %d\n", main, main.tamanho());
-		System.out.printf("Tamanho em bytes da %s: %d\n", sub, sub.tamanho());
-		System.out.printf("Tamanho em bytes da %s: %d\n", subsub, subsub.tamanho());
-		System.out.printf("Tamanho total da %s: %d\n", main, main.tamanhoTotal());
-		System.out.printf("Tamanho total da %s: %d\n", sub, sub.tamanhoTotal());
-		System.out.printf("Tamanho total da %s: %d\n", subsub, subsub.tamanhoTotal());
+
+		System.out.printf("Tamanho da pasta %s: %d bytes (%d arquivos, excluindo sub-pastas)\n", main, main.tamanho(), main.totalFiles());
+		System.out.printf("Tamanho da pasta %s: %d bytes (%d arquivos, excluindo sub-pastas)\n", sub, sub.tamanho(), sub.totalFiles());
+		System.out.printf("Tamanho da pasta %s: %d bytes (%d arquivos, excluindo sub-pastas)\n", subsub, subsub.tamanho(), subsub.totalFiles());
+		System.out.printf("Tamanho total da %s: %d bytes (%d arquivos, incluindo sub-pastas)\n", main, main.tamanhoTotal(), main.arquivosTotais());
+		System.out.printf("Tamanho total da %s: %d bytes (%d arquivos, incluindo sub-pastas)\n", sub, sub.tamanhoTotal(), sub.arquivosTotais());
+		System.out.printf("Tamanho total da %s: %d bytes (%d arquivos, incluindo sub-pastas)\n", subsub, subsub.tamanhoTotal(), subsub.arquivosTotais());
 		
 		System.out.printf("\n");
 		int totalExcluded = main.excluir("7.txt", true);
-
-		System.out.printf("Excluidos: %d\n", totalExcluded);
-		System.out.printf("Tamanho em bytes da %s: %d\n", main, main.tamanho());
-		System.out.printf("Tamanho em bytes da %s: %d\n", sub, sub.tamanho());
-		System.out.printf("Tamanho em bytes da %s: %d\n", subsub, subsub.tamanho());
-		System.out.printf("Tamanho total da %s: %d\n", main, main.tamanhoTotal());
-		System.out.printf("Tamanho total da %s: %d\n", sub, sub.tamanhoTotal());
-		System.out.printf("Tamanho total da %s: %d\n", subsub, subsub.tamanhoTotal());
+		System.out.printf("Total de arquivos excluidos: %d\n", totalExcluded);
+		
+		System.out.printf("Tamanho da pasta %s: %d bytes (%d arquivos, excluindo sub-pastas)\n", main, main.tamanho(), main.totalFiles());
+		System.out.printf("Tamanho da pasta %s: %d bytes (%d arquivos, excluindo sub-pastas)\n", sub, sub.tamanho(), sub.totalFiles());
+		System.out.printf("Tamanho da pasta %s: %d bytes (%d arquivos, excluindo sub-pastas)\n", subsub, subsub.tamanho(), subsub.totalFiles());
+		System.out.printf("Tamanho total da %s: %d bytes (%d arquivos, incluindo sub-pastas)\n", main, main.tamanhoTotal(), main.arquivosTotais());
+		System.out.printf("Tamanho total da %s: %d bytes (%d arquivos, incluindo sub-pastas)\n", sub, sub.tamanhoTotal(), sub.arquivosTotais());
+		System.out.printf("Tamanho total da %s: %d bytes (%d arquivos, incluindo sub-pastas)\n", subsub, subsub.tamanhoTotal(), subsub.arquivosTotais());		
 	}
-
+	
 }
